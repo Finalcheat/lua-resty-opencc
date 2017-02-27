@@ -21,7 +21,6 @@ int opencc_close(opencc_t opencc);
 char* opencc_convert_utf8(opencc_t opencc, const char* input, size_t length);
 void opencc_convert_utf8_free(char* str);
 
-size_t strlen(const char *s);
 ]]
 
 
