@@ -32,10 +32,8 @@ end
 
 
 function _M.convert(self, input)
-  -- local buf = ffi_new("char[?]", #input * 2)
   local output = opencc.opencc_convert_utf8(self._opencc_t, input, #input)
-  local output_length = ffi.C.strlen(output)
-  local output_str = ffi_str(output, output_length)
+  local output_str = ffi_str(output)
   opencc.opencc_convert_utf8_free(output)
   return output_str
 end
